@@ -8,7 +8,7 @@ class IntroPage extends StatelessWidget {
     return  Scaffold(
       body: Column(
         children: [
-        Image.asset('lib/images/doctor.png',
+        Image.asset('lib/icons/doctor.png',
         ),
       const  Text(
           'All specialists in one app',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicalapp/utilis.py/card.dart';
 import 'package:medicalapp/utilis.py/doctor.dart';  // Assuming CategoryCard is defined here
 
 class HomePage extends StatelessWidget {
@@ -116,29 +117,88 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-        SizedBox(
-  height: 150, // Adjust the height as needed
+                    const SizedBox(height: 10),
+
+        Container(
+  height: 80, // Adjust the height as needed
   child: ListView(
     scrollDirection: Axis.horizontal,
+    
     children: const [
       CategoryCard(
         imagePath: 'lib/icons/tooth.png',
         categoryName: 'Dentist',
       ),
       CategoryCard(
-        imagePath: 'lib/icons/image.png',
-        categoryName: 'Dentist',
+        imagePath: 'lib/icons/tooth.png',
+        categoryName: 'Surgeon',
       ),
       CategoryCard(
-        imagePath: 'lib/icons/doctor.png',
-        categoryName: 'Dentist',
+        imagePath: 'lib/icons/tooth.png',
+        categoryName: 'Medicine',
+      ),
+      CategoryCard(
+        imagePath: 'lib/icons/tooth.png',
+        categoryName: 'Medicine',
+      ),
+      CategoryCard(
+        imagePath: 'lib/icons/tooth.png',
+        categoryName: 'Medicine',
+      ),
+      CategoryCard(
+        imagePath: 'lib/icons/tooth.png',
+        categoryName: 'Medicine',
       ),
     ],
   ),
-)
+),
+                    const SizedBox(height: 10),
 
+const Padding(
+  padding: EdgeInsets.all(12),
+  child: Row(
+  crossAxisAlignment: CrossAxisAlignment.start, 
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+   children: [
+      Text('Doctor list',
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+      ),),
+      Text('See all'),
+    ],
+  ),
+),
+Expanded(
+  child: ListView(
+    scrollDirection: Axis.horizontal,
+
+    children: const [
+      DoctorCard(
+        doctorimage: 'lib/images/girl.jpg',
+       doctorname: 'Dr. Ariene McCoy', 
+      typeofdoctor: 'Therapist'),
+      DoctorCard(
+        doctorimage: 'lib/icons/doctor2.jpg',
+       doctorname: 'Dr. Ariene McCoy', 
+      typeofdoctor: 'Therapist'),
+      DoctorCard(
+        doctorimage: 'lib/icons/doctor2.jpg',
+       doctorname: 'Dr. Ariene McCoy', 
+      typeofdoctor: 'Therapist'),
+      DoctorCard(
+        doctorimage: 'lib/icons/doctor2.jpg',
+       doctorname: 'Dr. Ariene McCoy', 
+      typeofdoctor: 'Therapist'),
+      DoctorCard(
+        doctorimage: 'lib/icons/doctor2.jpg',
+       doctorname: 'Dr. Ariene McCoy', 
+      typeofdoctor: 'Therapist'),
+    ],
+  ),
+),
         ],
       ),
+    
     );
   }
 }

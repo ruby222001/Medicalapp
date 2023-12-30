@@ -13,14 +13,23 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 25.0),
-      child: Row(
-        children: [
-          Image.asset(
-            imagePath,
-            height: 30,
-          ),
-          Text(categoryName),
-        ],
+    
+      child: Container(
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.deepPurple[100],
+        ),
+        child: Row(
+        
+          children: [
+            Image.asset(
+              imagePath,
+              height: 40,
+            ),
+            Text(categoryName),
+          ],
+        ),
       ),
     );
   }
